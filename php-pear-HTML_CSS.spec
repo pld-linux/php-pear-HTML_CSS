@@ -6,12 +6,12 @@
 Summary:	%{_pearname} - class for generating CSS declarations
 Summary(pl):	%{_pearname} - klasa do generowania deklaracji CSS
 Name:		php-pear-%{_pearname}
-Version:	0.3.0
+Version:	0.3.1
 Release:	1
-License:	PHP 2.02
+License:	PHP 3.0
 Group:		Development/Languages/PHP
 Source0:	http://pear.php.net/get/%{_pearname}-%{version}.tgz
-# Source0-md5:	4a459102e6b81ff268ad22f345deed13
+# Source0-md5:	29180235ca0ba531b1cfc53390fa8f48
 URL:		http://pear.php.net/package/HTML_CSS/
 BuildRequires:	rpm-php-pearprov >= 4.0.2-98
 Requires:	php-pear
