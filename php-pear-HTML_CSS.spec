@@ -34,7 +34,7 @@ In addition, it shares the following with HTML_Common based classes:
 - indent style support
 - line ending style
 
-This class has in PEAR status: %{_status}.
+In PEAR status of this package is: %{_status}.
 
 %description -l pl
 %{_pearname} dostarcza prostego interfejsu do generowania deklaracji
