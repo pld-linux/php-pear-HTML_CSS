@@ -1,8 +1,9 @@
 %include	/usr/lib/rpm/macros.php
-%define         _class          HTML
-%define         _subclass       CSS
+%define		_class		HTML
+%define		_subclass	CSS
 %define		_status		stable
 %define		_pearname	%{_class}_%{_subclass}
+
 Summary:	%{_pearname} - class for generating CSS declarations
 Summary(pl):	%{_pearname} - klasa do generowania deklaracji CSS
 Name:		php-pear-%{_pearname}
