@@ -24,7 +24,7 @@ declaration. It is completely standards compliant, and has some great
 features:
 - simple OO interface to CSS definitions
 - output to:
-  - inline stylesheet delcarations
+  - inline stylesheet declarations
   - document internal stylesheet declarations
   - standalone stylesheet declarations
   - array of definitions
@@ -39,14 +39,14 @@ This class has in PEAR status: %{_status}.
 %{_pearname} dostarcza prostego interfejsu do generowania deklaracji
 arkusza stylów. Jest ca³kowicie zgodny ze standardami, i ma kilka
 ¶wietnych cech:
-- prosty interfejst OO do definicji CSS
+- prosty obiektowo zorientowany interfejs do definicji CSS
 - wyj¶cie do:
-  - inline stylesheet delcarations [FIXME]
-  - inline stylesheet delcarations [FIXME]
-  - samodzielny plik z definicjami
-  - tablica definicji
+  - deklaracji arkusza stylów w miejscu
+  - wewnêtrznych deklaracji arkusza stylów w dokumencie
+  - samodzielnego pliku z definicjami
+  - tablicy definicji
 
-Dodatkowo, wspó³dzieli nastêpuj±ce cechy z klasami opartymi na
+Ponadto wspó³dzieli nastêpuj±ce cechy z klasami opartymi na
 HTML_Common:
 - ró¿ne style wciêæ
 - ró¿ne rodzaje znaków koñca linii
