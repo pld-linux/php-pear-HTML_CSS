@@ -8,16 +8,19 @@ Summary:	%{_pearname} - class for generating CSS declarations
 Summary(pl):	%{_pearname} - klasa do generowania deklaracji CSS
 Name:		php-pear-%{_pearname}
 Version:	0.3.4
-Release:	2
+Release:	2.1
 License:	PHP 3.0
 Group:		Development/Languages/PHP
 Source0:	http://pear.php.net/get/%{_pearname}-%{version}.tgz
 # Source0-md5:	8f3d1eecd60e998da40f53c7e6306841
 URL:		http://pear.php.net/package/HTML_CSS/
-BuildRequires:	rpm-php-pearprov >= 4.0.2-98
+BuildRequires:	rpm-php-pearprov >= 4.4.2-11
 Requires:	php-pear
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
+
+# included in tests
+%define		_noautoreq 'pear(HTML_TestListener.php)' 'pear(TestUnit.php)'
 
 %description
 %{_pearname} provides a simple interface for generating a stylesheet
@@ -54,19 +57,36 @@ HTML_Common:
 
 Ta klasa ma w PEAR status: %{_status}.
 
+%package tests
+Summary:	Tests for PEAR::%{_pearname}
+Summary(pl):	Testy dla PEAR::%{_pearname}
+Group:		Development
+Requires:	%{name} = %{version}-%{release}
+
+%description tests
+Tests for PEAR::%{_pearname}.
+
+%description tests -l pl
+Testy dla PEAR::%{_pearname}.
+
 %prep
-%setup -q -c
+%pear_package_setup
 
 %install
 rm -rf $RPM_BUILD_ROOT
-install -d $RPM_BUILD_ROOT%{php_pear_dir}/%{_class}
-
-install %{_pearname}-%{version}/*.php $RPM_BUILD_ROOT%{php_pear_dir}/%{_class}
+install -d $RPM_BUILD_ROOT%{php_pear_dir}
+%pear_package_install
 
 %clean
 rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%doc %{_pearname}-%{version}/{examples,tests}
+%doc install.log
+%doc docs/%{_pearname}/examples
+%{php_pear_dir}/.registry/*.reg
 %{php_pear_dir}/%{_class}/*.php
+
+%files tests
+%defattr(644,root,root,755)
+%{php_pear_dir}/tests/*
