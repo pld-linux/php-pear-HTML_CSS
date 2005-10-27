@@ -10,6 +10,7 @@ Name:		php-pear-%{_pearname}
 Version:	1.0.0
 %define	_rc RC1
 Release:	1
+Epoch:		0
 License:	PHP 3.0
 Group:		Development/Languages/PHP
 Source0:	http://pear.php.net/get/%{_pearname}-%{version}%{_rc}.tgz
