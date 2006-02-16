@@ -4,11 +4,11 @@
 %define		_status		beta
 %define		_pearname	%{_class}_%{_subclass}
 
+%define	_rc RC1
 Summary:	%{_pearname} - class for generating CSS declarations
 Summary(pl):	%{_pearname} - klasa do generowania deklaracji CSS
 Name:		php-pear-%{_pearname}
 Version:	1.0.0
-%define	_rc RC1
 Release:	1
 Epoch:		0
 License:	PHP 3.0
@@ -19,7 +19,7 @@ URL:		http://pear.php.net/package/HTML_CSS/
 BuildRequires:	rpm-php-pearprov >= 4.4.2-11
 Requires:	php-pear
 Requires:	php-pear-HTML_Common >= 1.2
-Requires:	php-pear-PEAR >= 1:1.3.1
+Requires:	php-pear-PEAR-core >= 1:1.3.1
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
