@@ -1,21 +1,19 @@
 %include	/usr/lib/rpm/macros.php
 %define		_class		HTML
 %define		_subclass	CSS
-%define		_status		beta
+%define		_status		stable
 %define		_pearname	%{_class}_%{_subclass}
 
-%define	_rc		RC2
-%define	_rel	1
 Summary:	%{_pearname} - class for generating CSS declarations
 Summary(pl):	%{_pearname} - klasa do generowania deklaracji CSS
 Name:		php-pear-%{_pearname}
 Version:	1.0.0
-Release:	2.%{_rc}.%{_rel}
+Release:	3
 Epoch:		0
 License:	PHP 3.0
 Group:		Development/Languages/PHP
-Source0:	http://pear.php.net/get/%{_pearname}-%{version}%{_rc}.tgz
-# Source0-md5:	91e75bf0d828a57d8f037876c88de915
+Source0:	http://pear.php.net/get/%{_pearname}-%{version}.tgz
+# Source0-md5:	4891e10281716006d1a9db43752e1c6f
 URL:		http://pear.php.net/package/HTML_CSS/
 BuildRequires:	php-pear-PEAR
 BuildRequires:	rpm-php-pearprov >= 4.4.2-11
