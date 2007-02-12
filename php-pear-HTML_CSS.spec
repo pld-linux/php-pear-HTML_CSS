@@ -5,7 +5,7 @@
 %define		_pearname	%{_class}_%{_subclass}
 
 Summary:	%{_pearname} - class for generating CSS declarations
-Summary(pl):	%{_pearname} - klasa do generowania deklaracji CSS
+Summary(pl.UTF-8):   %{_pearname} - klasa do generowania deklaracji CSS
 Name:		php-pear-%{_pearname}
 Version:	1.0.1
 Release:	1
@@ -44,27 +44,27 @@ In addition, it shares the following with HTML_Common based classes:
 
 In PEAR status of this package is: %{_status}.
 
-%description -l pl
+%description -l pl.UTF-8
 %{_pearname} dostarcza prostego interfejsu do generowania deklaracji
-arkusza styl體. Jest ca砶owicie zgodny ze standardami, i ma kilka
-秝ietnych cech:
+arkusza styl贸w. Jest ca艂kowicie zgodny ze standardami, i ma kilka
+艣wietnych cech:
 - prosty obiektowo zorientowany interfejs do definicji CSS
-- wyj禼ie do:
-  - deklaracji arkusza styl體 w miejscu
-  - wewn阾rznych deklaracji arkusza styl體 w dokumencie
+- wyj艣cie do:
+  - deklaracji arkusza styl贸w w miejscu
+  - wewn臋trznych deklaracji arkusza styl贸w w dokumencie
   - samodzielnego pliku z definicjami
   - tablicy definicji
 
-Ponadto wsp蟪dzieli nast阷uj眂e cechy z klasami opartymi na
+Ponadto wsp贸艂dzieli nast臋puj膮ce cechy z klasami opartymi na
 HTML_Common:
-- r罂ne style wci赕
-- r罂ne rodzaje znak體 ko馽a linii
+- r贸偶ne style wci臋膰
+- r贸偶ne rodzaje znak贸w ko艅ca linii
 
 Ta klasa ma w PEAR status: %{_status}.
 
 %package tests
 Summary:	Tests for PEAR::%{_pearname}
-Summary(pl):	Testy dla PEAR::%{_pearname}
+Summary(pl.UTF-8):   Testy dla PEAR::%{_pearname}
 Group:		Development/Languages/PHP
 Requires:	%{name} = %{epoch}:%{version}-%{release}
 AutoReq:	no
@@ -73,7 +73,7 @@ AutoProv:	no
 %description tests
 Tests for PEAR::%{_pearname}.
 
-%description tests -l pl
+%description tests -l pl.UTF-8
 Testy dla PEAR::%{_pearname}.
 
 %prep
