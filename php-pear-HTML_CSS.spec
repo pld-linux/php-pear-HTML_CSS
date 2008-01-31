@@ -3,29 +3,28 @@
 %define		_subclass	CSS
 %define		_status		stable
 %define		_pearname	%{_class}_%{_subclass}
-
 Summary:	%{_pearname} - class for generating CSS declarations
 Summary(pl.UTF-8):	%{_pearname} - klasa do generowania deklaracji CSS
 Name:		php-pear-%{_pearname}
-Version:	1.4.0
+Version:	1.5.0
 Release:	1
 Epoch:		0
 License:	BSD
 Group:		Development/Languages/PHP
 Source0:	http://pear.php.net/get/%{_pearname}-%{version}.tgz
-# Source0-md5:	872893cafc955f0a4f4dac55e2495fc2
+# Source0-md5:	b1090079fb3f962713d9f59f96479c7c
 URL:		http://pear.php.net/package/HTML_CSS/
 BuildRequires:	php-pear-PEAR
 BuildRequires:	rpm-php-pearprov >= 4.4.2-11
 BuildRequires:	rpmbuild(macros) >= 1.300
 Requires:	php-pear
-Requires:	php-pear-HTML_Common >= 1.2
-Requires:	php-pear-PEAR-core >= 1:1.4.3
+Requires:	php-pear-HTML_Common >= 1.2.4
+Requires:	php-pear-PEAR-core >= 1:1.5.4
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 # included in tests
-%define		_noautoreq 'pear(HTML_TestListener.php)' 'pear(TestUnit.php)' 'pear(PEAR.*)'
+%define		_noautoreq 'pear(HTML_TestListener.php)' 'pear(TestUnit.php)' 'pear(PEAR.*)' 'pear(Services/W3C/CSSValidator.*)' 'pear(PHPUnit.*)'
 
 %description
 %{_pearname} provides a simple interface for generating a stylesheet
