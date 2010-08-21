@@ -7,19 +7,21 @@ Summary:	%{_pearname} - class for generating CSS declarations
 Summary(pl.UTF-8):	%{_pearname} - klasa do generowania deklaracji CSS
 Name:		php-pear-%{_pearname}
 Version:	1.5.4
-Release:	1
-Epoch:		0
+Release:	2
 License:	BSD
 Group:		Development/Languages/PHP
 Source0:	http://pear.php.net/get/%{_pearname}-%{version}.tgz
 # Source0-md5:	3bf50656f73175b9d57c7dd35ece4b49
 URL:		http://pear.php.net/package/HTML_CSS/
-BuildRequires:	php-pear-PEAR
+BuildRequires:	php-pear-PEAR >= 1:1.5.4
 BuildRequires:	rpm-php-pearprov >= 4.4.2-11
 BuildRequires:	rpmbuild(macros) >= 1.300
+Requires:	php-pcre
 Requires:	php-pear
 Requires:	php-pear-HTML_Common >= 1.2.4
 Requires:	php-pear-PEAR-core >= 1:1.5.4
+Suggests:	php-pear-PHPUnit
+Suggests:	php-pear-Services_W3C_CSSValidator
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
@@ -65,7 +67,7 @@ Ta klasa ma w PEAR status: %{_status}.
 Summary:	Tests for PEAR::%{_pearname}
 Summary(pl.UTF-8):	Testy dla PEAR::%{_pearname}
 Group:		Development/Languages/PHP
-Requires:	%{name} = %{epoch}:%{version}-%{release}
+Requires:	%{name} = %{version}-%{release}
 AutoProv:	no
 AutoReq:	no
 
